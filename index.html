@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Management Profit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Server Management Profit Calculator</h1>
+        
+        <label for="allocatedBudget">Allocated Server Budget:</label>
+        <select id="allocatedBudget">
+            <option value="10000">$10k</option>
+            <option value="15000">$15k</option>
+            <option value="25000">$25k</option>
+        </select>
+
+        <label for="moderators">Number of Moderators:</label>
+        <input type="number" id="moderators" value="1" min="1">
+        <select id="modCostLevel">
+            <option value="2000">Low ($2k per mod)</option>
+            <option value="4000">High ($4k per mod)</option>
+        </select>
+
+        <label for="cmResources">CM Resources (Fixed at 1):</label>
+        <select id="cmCostLevel">
+            <option value="4000">Low ($4k)</option>
+            <option value="6000">High ($6k)</option>
+        </select>
+
+        <label for="content">Content Package:</label>
+        <select id="content">
+            <option value="0">No Content</option>
+            <option value="10000">$10k</option>
+            <option value="20000">$20k</option>
+            <option value="30000">$30k</option>
+        </select>
+
+        <button onclick="calculateProfit()">Calculate Profits</button>
+
+        <div id="results">
+            <h2>Cost and Profit Breakdown</h2>
+            <p>Total Direct Costs: <span id="initialCost"></span></p>
+            <p>Agency Fee (20%): <span id="agencyFee"></span></p>
+            <p>Final Total Cost: <span id="finalCost"></span></p>
+            <p>Total Revenue: <span id="totalRevenue"></span></p>
+            <p>Profit: <span id="profit"></span></p>
+            <p>Margin: <span id="margin"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
